@@ -1,4 +1,6 @@
-import Link from "next/link";
+import Link from "next/link"
+
+import { meta } from "../pages/constants"
 
 export default function Footer() {
   return (
@@ -25,9 +27,9 @@ export default function Footer() {
       </div>
       <div className="flex space-x-4 pb-4 sm:pb-0">
         <Link
-          href="https://twitter.com/nutlope"
+          href={meta.authorTwitter}
           className="group"
-          aria-label="TaxPal on Twitter"
+          aria-label={`Follow ${meta.author} on Twitter`}
         >
           <svg
             aria-hidden="true"
@@ -37,9 +39,9 @@ export default function Footer() {
           </svg>
         </Link>
         <Link
-          href="https://github.com/Nutlope/twitterbio"
+          href={meta.repoLink}
           className="group"
-          aria-label="TaxPal on GitHub"
+          aria-label={meta.author + "'s GitHub"}
         >
           <svg
             aria-hidden="true"
@@ -50,5 +52,5 @@ export default function Footer() {
         </Link>
       </div>
     </footer>
-  );
+  )
 }

@@ -1,4 +1,6 @@
-import Document, { Head, Html, Main, NextScript } from "next/document";
+import Document, { Head, Html, Main, NextScript } from "next/document"
+
+import { meta } from "./constants"
 
 class MyDocument extends Document {
   render() {
@@ -6,22 +8,13 @@ class MyDocument extends Document {
       <Html lang="en">
         <Head>
           <link rel="icon" href="/favicon.ico" />
-          <meta
-            name="description"
-            content="Generate your next Twitter bio in seconds."
-          />
+          <meta name="description" content={meta.description} />
           <meta property="og:site_name" content="twitterbio.com" />
-          <meta
-            property="og:description"
-            content="Generate your next Twitter bio in seconds."
-          />
-          <meta property="og:title" content="Twitter Bio Generator" />
+          <meta property="og:description" content={meta.description} />
+          <meta property="og:title" content={meta.name} />
           <meta name="twitter:card" content="summary_large_image" />
-          <meta name="twitter:title" content="Twitter Bio Generator" />
-          <meta
-            name="twitter:description"
-            content="Generate your next Twitter bio in seconds."
-          />
+          <meta name="twitter:title" content={meta.name} />
+          <meta name="twitter:description" content={meta.description} />
           <meta
             property="og:image"
             content="https://twitterbio.com/og-image.png"
@@ -36,8 +29,8 @@ class MyDocument extends Document {
           <NextScript />
         </body>
       </Html>
-    );
+    )
   }
 }
 
-export default MyDocument;
+export default MyDocument

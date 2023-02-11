@@ -1,5 +1,7 @@
-import Image from "next/image";
-import Link from "next/link";
+import Image from "next/image"
+import Link from "next/link"
+
+import { meta } from "../pages/constants"
 
 export default function Header() {
   return (
@@ -13,7 +15,7 @@ export default function Header() {
           height={32}
         />
         <h1 className="sm:text-4xl text-2xl font-bold ml-2 tracking-tight">
-          twitterBio.com
+          {meta.domain}
         </h1>
       </Link>
       <a
@@ -30,5 +32,5 @@ export default function Header() {
         />
       </a>
     </header>
-  );
+  )
 }
