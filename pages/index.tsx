@@ -110,7 +110,7 @@ const Home: NextPage = () => {
             />
             <p className="text-left font-medium">
               Paste song's lyrics{" "}
-              <span className="text-slate-500">(or write them)</span>.
+              {/* <span className="text-slate-500">(or write them)</span>. */}
             </p>
           </div>
           <textarea
@@ -123,7 +123,8 @@ const Home: NextPage = () => {
           <div className="flex items-center space-x-3">
             <Image src="/2-black.png" width={30} height={30} alt="1 icon" />
             <p className="text-left font-medium">
-              Write artist's name(s) (optional)
+              Enter the artist's name(s){" "}
+              <span className="text-slate-500">(optional)</span>.
             </p>
           </div>
           <div className="block">
