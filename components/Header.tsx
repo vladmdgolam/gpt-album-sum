@@ -1,7 +1,7 @@
 import Image from "next/image"
 import Link from "next/link"
 
-import { meta } from "../pages/constants"
+import { meta } from "../utils/constants"
 
 export default function Header() {
   return (

@@ -1,6 +1,6 @@
 import Document, { Head, Html, Main, NextScript } from "next/document"
 
-import { meta } from "./constants"
+import { meta } from "../utils/constants"
 
 class MyDocument extends Document {
   render() {
