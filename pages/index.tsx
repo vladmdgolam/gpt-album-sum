@@ -18,10 +18,10 @@ import {
 } from "../utils/constants"
 
 const generatePrompt = (bio: string, names: string) => {
-  const _names = names ? `of ${names} ` : ""
-  const _prompt = `${promptStart} ${_names}${promptMiddle} ${bio}${
-    bio.slice(-1) === "." ? "" : "."
-  }`
+  const _names = names ? ` ${names}` : ""
+  const _prompt = `${promptStart} '${bio}'${
+    _names ? promptMiddle + _names : ""
+  }.`
   return _prompt
 }
 
@@ -34,7 +34,7 @@ const Home: NextPage = () => {
   console.log("Streamed response: ", generatedBios)
 
   const prompt = generatePrompt(bio, names)
-  console.log(prompt)
+  console.log("Prompt:", prompt)
 
   const generateBio = async (e: any) => {
     e.preventDefault()

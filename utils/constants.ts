@@ -1,5 +1,6 @@
-export const promptStart = `Please analyze the lyrics`
-export const promptMiddle = `and provide an interpretation of the song's meaning, including any particularly clever or noteworthy lines. Lyrics are:`
+export const promptStart =
+  "Explain the meaning of these song's lyrics. You can explain the whole idea and maybe meaning of the lyrics. Then mention some of puns or clever lyrical ideas and also explain them. Mention artist's names, if possible. The lyrics are:"
+export const promptMiddle = `. The artists are:`
 
 export const placeholder = `e.g: [Chorus]
 Sé que tú no me has olvida'o
