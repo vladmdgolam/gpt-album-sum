@@ -1,10 +1,7 @@
-export const promptStart = `The following is a conversation with an AI assistant. The assistant is helpful, creative, clever, and very friendly.
+export const promptStart = `Please analyze the lyrics`
+export const promptMiddle = `and provide an interpretation of the song's meaning, including any particularly clever or noteworthy lines. Lyrics are:`
 
-Human: Hello, who are you?
-AI: I am an AI created by OpenAI. How can I help you today?
-Human: What is the meaning of these song lyrics? You can explain the whole idea and maybe meaning of the lyrics. Then mention some of puns or clever lyrical ideas and also explain them. The lyrics are:`
-
-export const placeholder = `e.g [Coro:Rosalia]
+export const placeholder = `e.g: [Chorus]
 Sé que tú no me has olvida'o
 No me has olvida'o, no me has olvida'o
 Solo tú no me has olvida'o

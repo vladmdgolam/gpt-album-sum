@@ -10,17 +10,31 @@ import Github from "../components/GitHub"
 import Header from "../components/Header"
 import LoadingDots from "../components/LoadingDots"
 import ResizablePanel from "../components/ResizablePanel"
-import { meta, placeholder, promptStart } from "../utils/constants"
+import {
+  meta,
+  placeholder,
+  promptMiddle,
+  promptStart,
+} from "../utils/constants"
+
+const generatePrompt = (bio: string, names: string) => {
+  const _names = names ? `of ${names} ` : ""
+  const _prompt = `${promptStart} ${_names}${promptMiddle} ${bio}${
+    bio.slice(-1) === "." ? "" : "."
+  }`
+  return _prompt
+}
 
 const Home: NextPage = () => {
   const [loading, setLoading] = useState(false)
   const [bio, setBio] = useState("")
-  // const [vibe, setVibe] = useState<VibeType>("Professional")
+  const [names, setNames] = useState("")
   const [generatedBios, setGeneratedBios] = useState<string>("")
 
   console.log("Streamed response: ", generatedBios)
 
-  const prompt = `${promptStart} ${bio} ${bio.slice(-1) === "." ? "" : "."}`
+  const prompt = generatePrompt(bio, names)
+  console.log(prompt)
 
   const generateBio = async (e: any) => {
     e.preventDefault()
@@ -108,12 +122,19 @@ const Home: NextPage = () => {
           />
           <div className="flex items-center space-x-3">
             <Image src="/2-black.png" width={30} height={30} alt="1 icon" />
-            <p className="text-left font-medium">Press this button:</p>
+            <p className="text-left font-medium">
+              Write artist's name(s) (optional)
+            </p>
           </div>
-          {/* 
           <div className="block">
-            <DropDown vibe={vibe} setVibe={(newVibe) => setVibe(newVibe)} />
-          </div> */}
+            <input
+              value={names}
+              onChange={(e) => setNames(e.target.value)}
+              type="text"
+              className="w-full rounded-md border-gray-300 shadow-sm focus:border-black focus:ring-black my-5"
+              placeholder="e.g. Rosalia, J Balvin, Ozuna"
+            />
+          </div>
 
           {!loading && (
             <button
