@@ -117,6 +117,7 @@ const Home: NextPage = () => {
             value={bio}
             onChange={(e) => setBio(e.target.value)}
             rows={4}
+            maxLength={10000}
             className="w-full rounded-md border-gray-300 shadow-sm focus:border-black focus:ring-black my-5"
             placeholder={placeholder}
           />
@@ -132,6 +133,7 @@ const Home: NextPage = () => {
               value={names}
               onChange={(e) => setNames(e.target.value)}
               type="text"
+              maxLength={100}
               className="w-full rounded-md border-gray-300 shadow-sm focus:border-black focus:ring-black my-5"
               placeholder="e.g. Rosalia, J Balvin, Ozuna"
             />
