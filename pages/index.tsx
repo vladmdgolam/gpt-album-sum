@@ -29,9 +29,7 @@ const Home: NextPage = () => {
   const [loading, setLoading] = useState(false)
   const [bio, setBio] = useState("")
   const [names, setNames] = useState("")
-  const [explanations, setExplanations] = useState<string>(
-    "This song is by Connan Mockasin and it is a love song. The lyrics express the singer's commitment to stay with the person he loves all of his life, no matter what. He also describes their love as an easy flirt: they don't need to try hard or force it because it comes easily to them. 2. The lyrics contain clever puns, such as “easy flirt”, which show that the relationship of the two characters is relaxed and doesnor require any effort. It is a pun because when someone “flirt”, it is typically seen as something complicated, but this relationship is so strong that it can be done effortlessly."
-  )
+  const [explanations, setExplanations] = useState<string>("")
 
   console.log("Streamed response: ", explanations)
 
