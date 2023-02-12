@@ -15,14 +15,8 @@ class MyDocument extends Document {
           <meta name="twitter:card" content="summary_large_image" />
           <meta name="twitter:title" content={meta.name} />
           <meta name="twitter:description" content={meta.description} />
-          <meta
-            property="og:image"
-            content="https://twitterbio.com/og-image.png"
-          />
-          <meta
-            name="twitter:image"
-            content="https://twitterbio.com/og-image.png"
-          />
+          <meta property="og:image" content="/og-image.jpg" />
+          <meta name="twitter:image" content="/og-image.jpg" />
         </Head>
         <body>
           <Main />

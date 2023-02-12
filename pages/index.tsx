@@ -3,8 +3,9 @@ import type { NextPage } from "next"
 import Head from "next/head"
 import Image from "next/image"
 import { useState } from "react"
-import { Toaster, toast } from "react-hot-toast"
+import { Toaster } from "react-hot-toast"
 
+import { Explanations } from "../components/Explanations"
 import Footer from "../components/Footer"
 import Header from "../components/Header"
 import LoadingDots from "../components/LoadingDots"
@@ -28,16 +29,18 @@ const Home: NextPage = () => {
   const [loading, setLoading] = useState(false)
   const [bio, setBio] = useState("")
   const [names, setNames] = useState("")
-  const [generatedBios, setGeneratedBios] = useState<string>("")
+  const [explanations, setExplanations] = useState<string>(
+    "This song is by Connan Mockasin and it is a love song. The lyrics express the singer's commitment to stay with the person he loves all of his life, no matter what. He also describes their love as an easy flirt: they don't need to try hard or force it because it comes easily to them. 2. The lyrics contain clever puns, such as “easy flirt”, which show that the relationship of the two characters is relaxed and doesnor require any effort. It is a pun because when someone “flirt”, it is typically seen as something complicated, but this relationship is so strong that it can be done effortlessly."
+  )
 
-  console.log("Streamed response: ", generatedBios)
+  console.log("Streamed response: ", explanations)
 
   const prompt = generatePrompt(bio, names)
   console.log("Prompt:", prompt)
 
   const generateBio = async (e: any) => {
     e.preventDefault()
-    setGeneratedBios("")
+    setExplanations("")
     setLoading(true)
     // console.log(prompt)
     const response = await fetch("/api/generate", {
@@ -70,7 +73,7 @@ const Home: NextPage = () => {
       done = doneReading
       const chunkValue = decoder.decode(value)
       console.log(chunkValue)
-      setGeneratedBios((prev) => prev + chunkValue)
+      setExplanations((prev) => prev + chunkValue)
     }
 
     setLoading(false)
@@ -162,28 +165,7 @@ const Home: NextPage = () => {
         <ResizablePanel>
           <AnimatePresence mode="wait">
             <motion.div className="space-y-10 my-10">
-              {generatedBios && (
-                <>
-                  <div>
-                    <h2 className="sm:text-4xl text-3xl font-bold text-slate-900 mx-auto">
-                      Explaination
-                    </h2>
-                  </div>
-                  <div className="space-y-8 flex flex-col items-center justify-center max-w-xl mx-auto">
-                    <div
-                      className="bg-white rounded-xl shadow-md p-4 hover:bg-gray-100 transition cursor-copy border"
-                      onClick={() => {
-                        navigator.clipboard.writeText(generatedBios)
-                        toast("Explanation copied to clipboard", {
-                          icon: "✂️",
-                        })
-                      }}
-                    >
-                      <p>{generatedBios}</p>
-                    </div>
-                  </div>
-                </>
-              )}
+              {explanations && <Explanations explanations={explanations} />}
             </motion.div>
           </AnimatePresence>
         </ResizablePanel>

@@ -1,6 +1,6 @@
 export const promptStart =
-  "Explain the meaning of these song's lyrics. You can explain the whole idea and maybe meaning of the lyrics. Then mention some of puns or clever lyrical ideas and also explain them. Mention artist's names, if possible. The lyrics are:"
-export const promptMiddle = `. The artists are:`
+  "Explain the meaning of these song's lyrics. You can explain the whole idea and maybe meaning of the lyrics. Then mention some of puns or clever lyrical ideas and also explain them, if there are any. Mention artist's names, if possible. Don't mention the song's name. Prepend part about puns with '2.'. Lyrics are:"
+export const promptMiddle = `. Artists are:`
 
 export const placeholder = `e.g: [Chorus]
 Sé que tú no me has olvida'o
