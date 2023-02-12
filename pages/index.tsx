@@ -6,7 +6,6 @@ import { useState } from "react"
 import { Toaster, toast } from "react-hot-toast"
 
 import Footer from "../components/Footer"
-import Github from "../components/GitHub"
 import Header from "../components/Header"
 import LoadingDots from "../components/LoadingDots"
 import ResizablePanel from "../components/ResizablePanel"
@@ -86,7 +85,7 @@ const Home: NextPage = () => {
 
       <Header />
       <main className="flex flex-1 w-full flex-col items-center justify-center text-center px-4 mt-12 sm:mt-20">
-        <a
+        {/* <a
           className="flex max-w-fit items-center justify-center space-x-2 rounded-full border border-gray-300 bg-white px-4 py-2 text-sm text-gray-600 shadow-md transition-colors hover:bg-gray-100 mb-5"
           href={meta.repoLink}
           target="_blank"
@@ -94,7 +93,7 @@ const Home: NextPage = () => {
         >
           <Github />
           <p>Star on GitHub</p>
-        </a>
+        </a> */}
         <h1 className="sm:text-6xl text-4xl max-w-2xl font-bold text-slate-900">
           {meta.description}
         </h1>

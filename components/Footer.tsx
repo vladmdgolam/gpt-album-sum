@@ -22,16 +22,25 @@ export default function Footer() {
           rel="noreferrer"
           className="font-bold hover:underline transition underline-offset-2"
         >
-          Vercel Edge Functions.{" "}
+          Vercel
         </a>
-        Based on{" "}
+        . Based on{" "}
         <a
           href="https://vercel.com/templates/next.js/twitter-bio"
           target="_blank"
           rel="noreferrer"
           className="font-bold hover:underline transition underline-offset-2"
         >
-          AI Twitter Bio Template.
+          AI Twitter Bio
+        </a>
+        . Built{"\u00A0"}by{"\u00A0"}
+        <a
+          href="https://vladmdgolam.me"
+          target="_blank"
+          rel="noreferrer"
+          className="font-bold hover:underline transition underline-offset-2"
+        >
+          Vlad{"\u00A0"}Md{"\u00A0"}Golam
         </a>
       </div>
       <div className="flex space-x-4 pb-4 sm:pb-0">
