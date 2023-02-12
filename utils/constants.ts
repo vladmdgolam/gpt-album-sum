@@ -11,10 +11,10 @@ No me has olvida'o, no me has olvida'o.
 
 export const meta = {
   name: "Explain Lyrics",
-  domain: "lyricsMeaning.vercel.app",
-  description: "Summarize and explain music lyrics.",
+  domain: "explain-lyrics.vercel.app",
+  description: "Summarize and explain lyrics meaning.",
   repoLink: "https://github.com/vladmdgolam/gpt-album-sum",
   authorTwitter: "https://twitter.com/vladmdgolam",
-  address: "https://lyricsmeaning.vercel.app",
-  author: "Vlad MD Golam",
+  address: "https://explain-lyrics.vercel.app",
+  author: "Vlad Md Golam",
 }
