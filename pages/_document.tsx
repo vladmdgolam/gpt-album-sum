@@ -12,6 +12,7 @@ class MyDocument extends Document {
           <meta property="og:site_name" content="twitterbio.com" />
           <meta property="og:description" content={meta.description} />
           <meta property="og:title" content={meta.name} />
+          <meta name="twitter:card" content="summary_large_image" />
           <meta name="twitter:title" content={meta.name} />
           <meta name="twitter:description" content={meta.description} />
           <meta property="og:image" content="/og-image.jpg" />
